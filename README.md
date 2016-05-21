@@ -72,12 +72,12 @@ satisfy the following three conditions:
 
 For example, this matrix:
 
-| 0 | 1 | 0 |
-| 1 | 0 | 0 |
-| 1 | 0 | 0 |
-| 0 | 0 | 1 |
-| 1 | 0 | 0 |
-| 0 | 0 | 1 |
+    | 0 | 1 | 0 |
+    | 1 | 0 | 0 |
+    | 1 | 0 | 0 |
+    | 0 | 0 | 1 |
+    | 1 | 0 | 0 |
+    | 0 | 0 | 1 |
 
 ...means that thing #0 goes in group #1, things #1, #2 and #4 go in group #0,
 and things #3 and #5 go in group #2. The order of the groups doesn't
