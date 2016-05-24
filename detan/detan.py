@@ -96,7 +96,7 @@ class AssignmentAnnealing:
 
     This is a very simple example; there are modes of failure you might need to
     account for depending on your inputs. Since the iterator returned by the
-    annealer is just itself, you can use the built-in function `:func:next()`
+    annealer is just itself, you can use the built-in function :func:`next()`
     instead::
 
         for temperature_steps in range(20):
@@ -104,15 +104,15 @@ class AssignmentAnnealing:
                 next(annealer)
             annealer.cool()
 
-    The `:method:cool()` method will lower the temperature by the ratio given
-    in the constructor.
+    The :meth:`cool()` method will lower the
+    temperature by the ratio given in the constructor.
 
     The annealing object also keeps track of the last set of assignment
-    potentials and temperature when `:method:cool()` was called.
+    potentials and temperature when :meth:`cool()` was called.
 
     Due to the maths involved combined with floating point imprecision, it is
     possible that the fixed point iteration sometimes results in NaN entries in
-    the assignment matrix. The `:method:reheat()` method will restore the
+    the assignment matrix. The :meth:`reheat()` method will restore the
     remembered temperature and assignments, and the caller can then eg. change
     the ratio, or take some other action to continue annealing.
 
@@ -171,7 +171,7 @@ class AssignmentAnnealing:
     def __next__(self):
         """
         When the annealer is used as an iterator (either in a `for` loop or by
-        calling `:func:next(annealer)`, the value produced is the next set of
+        calling :func:`next(annealer)`, the value produced is the next set of
         assignment potentials from the fixed point iteration.
         """
         next_assignments = self.function(self.assignments, self.temperature)
@@ -191,7 +191,7 @@ class AssignmentAnnealing:
 
     def reheat(self):
         """
-        Restores the result and temperature from before the `:func:cool()`
+        Restores the result and temperature from before the :meth:`cool()`
         method was called.
         """
         self.temperature, self.assignments = self._stashed
