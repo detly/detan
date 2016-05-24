@@ -11,7 +11,7 @@ Modules
 
    detan
 
-.. include:: ../README.md
+.. include:: ../README.rst
    
 Indices and tables
 ------------------
