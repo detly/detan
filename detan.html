@@ -74,7 +74,7 @@ iterations. It can be used as an iterator, like so:</p>
 </div>
 <p>This is a very simple example; there are modes of failure you might need to
 account for depending on your inputs. Since the iterator returned by the
-annealer is just itself, you can use the built-in function <cite>:func:next()</cite>
+annealer is just itself, you can use the built-in function <code class="xref py py-func docutils literal"><span class="pre">next()</span></code>
 instead:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">temperature_steps</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">20</span><span class="p">):</span>
     <span class="k">for</span> <span class="n">iterations</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">20</span><span class="p">):</span>
@@ -82,13 +82,13 @@ instead:</p>
     <span class="n">annealer</span><span class="o">.</span><span class="n">cool</span><span class="p">()</span>
 </pre></div>
 </div>
-<p>The <cite>:method:cool()</cite> method will lower the temperature by the ratio given
-in the constructor.</p>
+<p>The <a class="reference internal" href="#detan.detan.AssignmentAnnealing.cool" title="detan.detan.AssignmentAnnealing.cool"><code class="xref py py-meth docutils literal"><span class="pre">cool()</span></code></a> method will lower the
+temperature by the ratio given in the constructor.</p>
 <p>The annealing object also keeps track of the last set of assignment
-potentials and temperature when <cite>:method:cool()</cite> was called.</p>
+potentials and temperature when <a class="reference internal" href="#detan.detan.AssignmentAnnealing.cool" title="detan.detan.AssignmentAnnealing.cool"><code class="xref py py-meth docutils literal"><span class="pre">cool()</span></code></a> was called.</p>
 <p>Due to the maths involved combined with floating point imprecision, it is
 possible that the fixed point iteration sometimes results in NaN entries in
-the assignment matrix. The <cite>:method:reheat()</cite> method will restore the
+the assignment matrix. The <a class="reference internal" href="#detan.detan.AssignmentAnnealing.reheat" title="detan.detan.AssignmentAnnealing.reheat"><code class="xref py py-meth docutils literal"><span class="pre">reheat()</span></code></a> method will restore the
 remembered temperature and assignments, and the caller can then eg. change
 the ratio, or take some other action to continue annealing.</p>
 <p>The <cite>ratio</cite> member is a part of the API and can be changed at any time. It
@@ -106,7 +106,7 @@ user-supplied ratio.</p>
 <dl class="method">
 <dt id="detan.detan.AssignmentAnnealing.reheat">
 <code class="descname">reheat</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#detan.detan.AssignmentAnnealing.reheat" title="Permalink to this definition">¶</a></dt>
-<dd><p>Restores the result and temperature from before the <cite>:func:cool()</cite>
+<dd><p>Restores the result and temperature from before the <a class="reference internal" href="#detan.detan.AssignmentAnnealing.cool" title="detan.detan.AssignmentAnnealing.cool"><code class="xref py py-meth docutils literal"><span class="pre">cool()</span></code></a>
 method was called.</p>
 </dd></dl>
 
